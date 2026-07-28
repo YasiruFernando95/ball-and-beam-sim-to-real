@@ -1,0 +1,22 @@
+{
+  "NO_LOAD": {
+    "K_median": -14.735,
+    "K_mad": 8.380833333333332,
+    "tau_median_s": 0.41886686094052594,
+    "tau_mad_s": 0.042931059489320605,
+    "n_steps": 6
+  },
+  "BEAM_LOAD": {
+    "K_median": -31.53,
+    "K_mad": 4.8025,
+    "tau_median_s": 0.405556197488097,
+    "tau_mad_s": 0.053148057857888065,
+    "n_steps": 6
+  },
+  "SIM_MODEL_RECOMMENDED": {
+    "form": "W(s)/U(s) = K / (tau*s + 1)",
+    "K_degps_per_u": -31.53,
+    "tau_s": 0.405556197488097,
+    "discrete_update": "W_next = W + (dt/tau) * (K*u - W)"
+  }
+}

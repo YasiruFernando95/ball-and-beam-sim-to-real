@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="ball_beam_vgroove">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      </inertial>
+    <visual>
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.10 0.10 0.02" />
+        </geometry>
+      <material name="gray">
+        <color rgba="0.2 0.2 0.2 1" />
+        </material>
+      </visual>
+    <collision>
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.10 0.10 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="beam_link">
+    <inertial>
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <mass value="0.150" />
+      <inertia ixx="3.0e-05" ixy="0" ixz="0" iyy="1.30e-04" iyz="0" izz="1.30e-04" />
+      </inertial>
+    <visual>
+      <origin xyz="0 0.01414 0.04914" rpy="0.785398 0 0" />
+      <geometry>
+        <box size="0.30 0.04 0.004" />
+        </geometry>
+      <material name="acry">
+        <color rgba="0.8 0.8 0.9 1" />
+        </material>
+      </visual>
+    <collision>
+      <origin xyz="0 0.01414 0.04914" rpy="0.785398 0 0" />
+      <geometry>
+        <box size="0.30 0.04 0.004" />
+        </geometry>
+      </collision>
+    <visual>
+      <origin xyz="0 -0.01414 0.04914" rpy="-0.785398 0 0" />
+      <geometry>
+        <box size="0.30 0.04 0.004" />
+        </geometry>
+      <material name="acry" />
+      </visual>
+    <collision>
+      <origin xyz="0 -0.01414 0.04914" rpy="-0.785398 0 0" />
+      <geometry>
+        <box size="0.30 0.04 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="endstop_left">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.06 0.06" />
+        </geometry>
+      </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.06 0.06" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="endstop_right">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.06 0.06" />
+        </geometry>
+      </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.06 0.06" />
+        </geometry>
+      </visual>
+    </link>
+  <joint name="endstop_left_fixed" type="fixed">
+    <parent link="beam_link" />
+    <child link="endstop_left" />
+    <origin xyz="-0.155000 0.014140 0.049140" rpy="0.785398 0.000000 0.000000" />
+    </joint>
+  <joint name="endstop_right_fixed" type="fixed">
+    <parent link="beam_link" />
+    <child link="endstop_right" />
+    <origin xyz="0.155000 0.014140 0.049140" rpy="0.785398 0.000000 0.000000" />
+    </joint>
+  <joint name="hinge_y" type="revolute">
+    <parent link="base_link" />
+    <child link="beam_link" />
+    <origin xyz="0 0 0.10" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.349066" upper="0.349066" effort="50" velocity="100" />
+    </joint>
+  </robot>

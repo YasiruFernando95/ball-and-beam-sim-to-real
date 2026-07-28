@@ -1,0 +1,17 @@
+\begin{table}[h]
+\centering
+\caption{Performance Comparison (mean $\pm$ std)}
+\label{tab:performance}
+\begin{tabular}{lccc}
+\hline
+Metric & RL & PID & Improvement \\
+\hline
+RMSE (mm) & $9.92 \pm 2.96$ & $7.25 \pm 4.43$ & $-36.7\%$ \\
+MAE (mm) & $7.23 \pm 1.79$ & $6.81 \pm 4.31$ & $-6.1\%$ \\
+Max Error (mm) & $34.60 \pm 12.18$ & $15.17 \pm 13.03$ & $-128.2\%^{*}$ \\
+Settling Time (s) & $3.09 \pm 1.79$ & $3.86 \pm 5.58$ & $+19.8\%$ \\
+Control Effort (deg) & $138.96 \pm 67.73$ & $15.60 \pm 26.64$ & $-790.9\%^{**}$ \\
+\hline
+\multicolumn{4}{l}{\footnotesize $^{*}p<0.05$, $^{**}p<0.01$, $^{***}p<0.001$} \\
+\end{tabular}
+\end{table}

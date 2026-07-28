@@ -1,0 +1,74 @@
+# -----------------------------
+# STM32CubeIDE build files
+# -----------------------------
+Debug/
+Release/
+*.elf
+*.hex
+*.bin
+*.map
+*.o
+*.obj
+*.d
+*.su
+*.cyclo
+*.list
+
+# STM32CubeIDE workspace metadata
+.metadata/
+.settings/
+*.launch
+
+# Keep project configuration
+!*.ioc
+
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+
+.venv/
+venv/
+env/
+
+.ipynb_checkpoints/
+
+# -----------------------------
+# RL training outputs
+# -----------------------------
+runs/
+logs/
+checkpoints/
+tensorboard/
+wandb/
+videos/
+
+*.pt
+*.pth
+*.ckpt
+
+# -----------------------------
+# Experiment-generated files
+# -----------------------------
+temp/
+tmp/
+output/
+
+
+# -----------------------------
+# Operating system files
+# -----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------
+# Editor and temporary files
+# -----------------------------
+*.tmp
+*.bak
+*.swp
+*~
+~$*
