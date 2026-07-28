@@ -24,9 +24,6 @@ Implemented features:
 - [x] PC-command timeout protection
 - [x] PyBullet/Gymnasium RL simulation environment
 - [x] Hardware interface for RL beam-angle commands
-- [ ] Add final training scripts and configurations
-- [ ] Add trained policies and evaluation results
-- [ ] Add documented sim-to-real comparison results
 
 ## Project Objectives
 
